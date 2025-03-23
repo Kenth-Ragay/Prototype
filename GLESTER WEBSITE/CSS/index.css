@@ -1,0 +1,354 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+/* Basic layout */
+body {
+    height: 100%;
+    overflow: hidden;
+/* Enables vertical scrolling */
+    scroll-behavior: smooth;
+}
+
+/* Full screen sections */
+section {
+    width: 100%;
+    height: 100vh;  /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    transition: transform 1s ease-in-out;
+}
+
+:root {
+    --primary-color: #0073e6;
+    --secondary-color: #000000;
+    --background-color: #ffffff;
+    --card-background: #fff;
+    --text-color: #444;
+    --border-radius: 10px;
+    --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+    padding: 15px 50px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    background: rgba(255, 255, 255, 0.1); /* Light transparency */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    z-index: 11;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: rgb(34, 153, 192);
+}
+.fade {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+/* Section 1 */
+.section1 {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    background-image: url('../picture/pexels-expect-best-79873-323705.jpg');
+    background-size: cover;  /* Ensure the image covers the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.section1 h1 {
+    margin-top: 10px; /* Add space between image and text */
+    font-weight: bold;
+
+}
+
+.Logo{
+    width: 35vh;
+    border-radius: 50%;
+}
+
+/* Section 2 (Resume Section) */
+.section-2 {
+    padding: 50px;
+    background: #f1f1f1;
+    color: #333;
+}
+
+/* Resume section styles */
+.section-2 h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* .resume-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.resume-item {
+    margin-bottom: 15px;
+}
+
+/* Navigation Slide Container */
+.slide-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide-content {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 3rem;
+    }
+    /* Adjust layout for small screens */
+    .resume-content {
+        flex-direction: column;
+    }
+}
+
+/* Smooth Slide Transition (For Active Slides) */
+.slide-container {
+    position: relative;
+}
+
+.slide {
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+} */
+
+
+  /* Resume Container */
+
+  .resume{
+ font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  top: 100px;
+
+  }
+  .resume1 {
+    width:80%;
+    height: 90vh;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  
+  /* Header (Profile Picture & Name Section) */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 5vh;
+  }
+  
+  .profile-pic {
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+  }
+  
+  /* .name-bar {
+    flex: 1;
+  }
+  
+  .name-bar h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .name-bar p {
+    font-size: 16px;
+    margin: 5px 0 0;
+    color: #000000;
+  }
+
+  .section01{
+    color: #20202082;
+  }
+
+  .section h2 {
+    font-size: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+  }
+  
+  /* Job Experience & Education */
+  .job, .education {
+  text-align: center; /* Centering content */
+}
+
+.job h3, .education h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.job p, .education p, section p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Fix Skills Section */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the skills */
+  gap: 10px;
+}
+
+.skill {
+  background: #2c3e50;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: inline-block;
+  min-width: 80px; /* Ensures uniform button sizes */
+  text-align: center;
+}
+
+/* Contact Info */
+.contact {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.contact p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 600px) {
+  .resume {
+    width: 90%;
+    max-height: 95vh;
+  }
+  
+  .section h2 {
+    font-size: 10px;
+  }
+  
+  .skills {
+    justify-content: center;
+  }
+} */
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    background: var(--background-color);
+    padding: 30px;
+    margin: 50px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+ul {
+    list-style: none;
+}
+ul li {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin: 5px 0;
+    box-shadow: var(--shadow);
+    color: #4c4747;
+    font-size: 14px;
+}
