@@ -12,7 +12,7 @@ function changeBackgroundImage() {
   section.classList.remove("fade");
   void section.offsetWidth; // Trick to restart animation
 
-    section.style.backgroundImage = `url('${"../picture/" + randomImage}')`;
+    section.style.backgroundImage = `url('${"../GLESTER WEBSITE/picture/" + randomImage}')`;
     section.classList.add("fade");
 }
 
